@@ -41,14 +41,14 @@ export default function ConnectSection() {
     return (
         <div className="volunteer px-5 py-[40px] w-full">
             <div className="container mx-auto max-w-2xl py-[80px]">
-            <p className='font-bold text-xl lg:text-2xl mb-[20px]'>We'd love to hear from you.. let's connect!</p>
+            <p className='font-bold text-xl lg:text-2xl mb-[20px]'>We&apos;d love to hear from you... let&apos;s connect!</p>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     name="name"
                     placeholder="Your Name"
                     className="mb-2 block w-full px-4 py-2 border border-gray-300 rounded-md"
-                    value={name}
+                value={name}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
                 />
@@ -70,7 +70,7 @@ export default function ConnectSection() {
                     disabled={isSubmitting}
                     rows="4"
                 />
-                <SecondaryButton text='send' />
+                <SecondaryButton text={buttonText} disabled={isSubmitting} />
             </form>
             </div>
         </div>
