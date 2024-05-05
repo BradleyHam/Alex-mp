@@ -36,7 +36,7 @@ export default function Volunteer() {
 
     return (
         <div className="volunteer container px-5 py-[40px] border border-gray-300 rounded-lg mt-4">
-            <p className="text-base mb-4">Keen to help? <span className='italic'> Let's connect! </span></p>
+            <p className="text-base mb-4">Keen to help? <span className='italic'> Let&apos;s connect! </span></p>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
