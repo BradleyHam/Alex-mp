@@ -13,6 +13,7 @@
 body {
   color: var(--text);
   font-family: 'Poppins';
+  font-family: var(--font-poppins);
 }
 .span{
   font-weight: 600;
