@@ -41,7 +41,7 @@ export default function ConnectSection() {
     return (
         <div className="volunteer px-5 py-[70px] ] w-full">
             <div className="container mx-auto max-w-2xl ">
-            <p className='font-bold text-xl lg:text-2xl mb-[20px]'>We&apos;d love to hear from you... let&apos;s connect!</p>
+            <p className='font-bold text-xl lg:text-2xl mb-[20px] lg:text-center lg:mb-[30px]'>We&apos;d love to hear from you... let&apos;s connect!</p>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

@@ -42,7 +42,7 @@ export default function Volunteer() {
                     type="text"
                     name="name"
                     placeholder="Your Name"
-                    className="text-sm mb-4 mt-2 block w-full px-4 py-2 border border-gray-300 rounded-md"
+                    className="text-sm mb-4 mt-2 block w-full px-4 py-3 border border-gray-300 rounded-md"
                     value={name}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
@@ -51,7 +51,7 @@ export default function Volunteer() {
                     type="email"
                     name="email"
                     placeholder="Your Email"
-                    className="text-sm mb-4 block w-full px-4 py-2 border border-gray-300 rounded-md"
+                    className="text-sm mb-4 block w-full px-4 py-3 border border-gray-300 rounded-md"
                     value={email}
                     onChange={handleInputChange}
                     disabled={isSubmitting}
