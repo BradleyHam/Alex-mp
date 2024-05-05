@@ -20,20 +20,24 @@ body {
 }
 div{
   font-family: 'poppins';
+  font-family: var(--font-poppins);
 }
 p{
   color: var(--text);
   font-family: 'Poppins';
+  font-family: var(--font-poppins);
   font-size: 18px;
 }
 h1{
   font-family: 'Poppins';
+  font-family: var(--font-poppins);
   font-size: 24px;
   margin-bottom: 20px;
   color: var(--secondaryAccent)
 }
 h2{
   font-family: 'Poppins';
+  font-family: var(--font-poppins);
   font-weight: bold;
   color: var(--text);
   font-size: 24px;
@@ -41,6 +45,7 @@ h2{
 }
 h3{
   font-family: 'poppins';
+  font-family: var(--font-poppins);
   font-weight: 600;
   font-size: 20px;
 }
