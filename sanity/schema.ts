@@ -1,7 +1,7 @@
 // Importing necessary Sanity types and components
 import { type SchemaTypeDefinition } from 'sanity'
 
-import blockContent from './schemaTypes/blockContent' // Ensure this is set up for rich text fields
+
 
 // Schema definition starts here
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -13,38 +13,90 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: "document",
       fields: [
         {
-          title: "Header Image",
-          name: "headerImage",
-          type: "image",
-          options: {
-            hotspot: true  // Enables image cropping
-          }
-        },
-        {
-          title: "Heading",
-          name: "heading",
-          type: "string",
-          description: "The main heading of the page"
-        },
-        {
-          title: "Main Message",
-          name: "mainMessage",
+          title: "Mission Statement Heading",
+          name: "missionStatementHeading",
           type: "text"
         },
         {
-          title: "Featured Video",
-          name: "featuredVideo",
-          type: "url",
-          description: "Link to a featured video, e.g., a YouTube video"
+          title: "Mission Statement",
+          name: "missionStatement",
+          type: "text"
         },
         {
-          title: "Call to Action",
-          name: "callToAction",
-          type: "string",
-          description: "A strong call to action to encourage visitor engagement"
+          title: "Areas of Focus Heading",
+          name: "areasOfFocusHeading",
+          type: "text"
+        },
+        {
+          title: "Areas of Focus",
+          name: "areasOfFocus",
+          type: "array",
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  title: 'Focus Heading',
+                  name: 'areaOfFocus',
+                  type: 'string'
+                },
+                {
+                  title: 'Problem Description',
+                  name: 'problemDescription',
+                  type: 'text'
+                },
+                {
+                  title: 'Proposed Solution Description',
+                  name: 'proposedSolutionDescription',
+                  type: 'text'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: "Get Involved Heading",
+          name: "getInvolvedHeading",
+          type: "text"
+        },
+        {
+          title: "Vote Instructions",
+          name: "voteInstructions",
+          type: "text"
+        },
+        {
+          title: "Volunteer heading",
+          name: "volunteerHeading",
+          type: "text",
+          description: 'text displayed aboved volunteer form'
+        },
+        {
+          title: "Donate Instructions",
+          name: "donateInstructions",
+          type: "text"
+        },
+        {
+          title: "News Heading",
+          name: "newsHeading",
+          type: "text"
+        },  
+        {
+          title: "Contact Section Heading",
+          name: "contactSectionHeading",
+          type: "text"
+        },  
+       
+      ],
+      preview: {
+        prepare() {
+          return {
+            title: 'Home Page'  // Static title for all documents of this type
+          }
         }
-      ]
-    },    
+      }
+      
+    },  
+   
 
     // About Page Schema
     {

@@ -22,6 +22,6 @@
     },
     "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/HomeComponents/Accordion.js", "app/HomeComponents/ConnectSection.js", "app/HomeComponents/NewsArticleCard.js", "app/HomeComponents/Volunteer.js", "app/page.js", "app/HomeComponents/MissionSection.js", "app/page.js"],
   "exclude": ["node_modules"]
 }

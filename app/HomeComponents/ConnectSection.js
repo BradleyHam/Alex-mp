@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import SecondaryButton from '../SiteComponents/SecondaryButton';
 
-export default function ConnectSection() {
+export default function ConnectSection({contactHeading}) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -41,7 +41,7 @@ export default function ConnectSection() {
     return (
         <div className="volunteer px-5 py-[70px] ] w-full">
             <div className="container mx-auto max-w-2xl ">
-            <h2 className='font-bold text-lg lg:text-2xl mb-[20px] lg:text-center lg:mb-[30px]'>We&apos;d love to hear from you... let&apos;s connect!</h2>
+            <h2 className='font-bold text-lg lg:text-2xl mb-[20px] lg:text-center lg:mb-[30px]'>{contactHeading}</h2>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
