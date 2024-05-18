@@ -11,7 +11,7 @@ export default function WhyVoteAlex({points, whyVoteHeading}: {points: string[],
                 <div className="text-side lg:flex-1 lg:order-first max-w-3xl mx-auto">
                 <h2 className="text-3xl mt-8 lg:mt-0 mb-8    tracking-tight text-center">{whyVoteHeading}</h2>
                    <ul className=" flex flex-col space-y-6">
-                        { points.map((point, index) => <div className="flex items-center space-x-4"><div className="w-[30px]"><GiCheckMark size={25} color='#A3D1B1'/></div>
+                        { points.map((point, index) => <div key={index} className="flex items-center space-x-4"><div className="w-[30px]"><GiCheckMark size={25} color='#A3D1B1'/></div>
 <li className='text-lg' key={index}>{point}</li></div>)}
                    </ul>
                 </div>

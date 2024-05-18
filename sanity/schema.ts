@@ -186,7 +186,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
         {
           title: "Short description",
           name: "shortDescription",
-          type: "text"
+          type: "text",
+          description: 'a short description for the news card on the news page, not displayed on the post page'
         },
         {
           title: "Content",
