@@ -65,6 +65,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "text"
         },
         {
+          title: "Link to vote",
+          name: "linkToVote",
+          type: "url"
+        },
+        {
           title: "Volunteer heading",
           name: "volunteerHeading",
           type: "text",
@@ -76,6 +81,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "text"
         },
         {
+          title: "Link to donate",
+          name: "linkToDonate",
+          type: "url"
+        },
+        {
           title: "News Heading",
           name: "newsHeading",
           type: "text"
@@ -84,7 +94,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           title: "Contact Section Heading",
           name: "contactSectionHeading",
           type: "text"
-        },  
+        }
        
       ],
       preview: {
@@ -105,43 +115,44 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: "document",
       fields: [
         {
-          title: "Biography",
-          name: "biography",
+          title: "About Title",
+          name: "aboutTitle",
+          type: "text",
+        },
+        {
+          title: "About",
+          name: "about",
+          type: "text"
+        },
+        {
+          title: "About Image",
+          name: "aboutImage",
+          type: "image"
+        },
+        {
+          title: "Why vote heading",
+          name: "whyVoteHeading",
+          type: "text"
+        },
+        {
+          title: "Why vote points",
+          name: "whyVotePoints",
           type: "array",
           of: [
             {
-              type: 'block'
+              type: 'text'
             }
-          ],
-        },
-        {
-          title: "Vision",
-          name: "vision",
-          type: "text"
-        },
-        {
-          title: "Mission",
-          name: "mission",
-          type: "text"
+          ]
         }
-      ]
-    },
-
-    // News Page Schema - Document containing multiple posts
-    {
-      title: "News Page",
-      name: "newsPage",
-      type: "document",
-      fields: [
-        {
-          title: "Articles",
-          name: "articles",
-          type: "array",
-          of: [{type: 'post'}]
+      ],
+      preview: {
+        prepare() {
+          return {
+            title: 'About Page'  // Static title for all documents of this type
+          }
         }
-      ]
+      }
     },
-
     // Post Schema for News Articles
     {
       title: "News Post",
@@ -149,14 +160,33 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: "document",
       fields: [
         {
-          title: "Title",
-          name: "title",
+          title: "Post Title",
+          name: "postTitle",
           type: "string"
+        },
+        {
+          title: "Slug",
+          name: "slug",
+          type: "slug",
+          options: {
+            source: "postTitle",
+            maxLength: 96
+          }
+        },
+        {
+          title: "Post Image",
+          name: "postImage",
+          type: "image"
         },
         {
           title: "Date",
           name: "date",
-          type: "datetime"
+          type: "date"
+        },
+        {
+          title: "Short description",
+          name: "shortDescription",
+          type: "text"
         },
         {
           title: "Content",
@@ -178,26 +208,35 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: "document",
       fields: [
         {
-          title: "Email",
-          name: "email",
-          type: "string"
-        },
-        {
-          title: "Phone Number",
-          name: "phoneNumber",
-          type: "string"
-        },
-        {
-          title: "Address",
-          name: "address",
+          title: "Contact Page Heading",
+          name: "contactPageHeading",
           type: "text"
         },
         {
-          title: "Contact Form URL",
-          name: "contactFormUrl",
-          type: "url"
+          title: "Contact Details",
+          name: "contactDetails",
+          type: "array",
+          of: [
+            {
+              type: 'block'
+            }
+          ]
+        },
+        {
+          title: "Contact Form Heading",
+          name: "contactFormHeading",
+          type: "text"
+        },
+        
+      ],
+      preview: {
+        prepare() {
+          return {
+            title: 'Contact Page'  // Static title for all documents of this type
+          }
         }
-      ]
+      }
     },
   ],
+  
 }

@@ -9,7 +9,7 @@ const iconColor = '#53212F';
 function Footer() {
   return (
   
-    <div className='footer bg-gray-50 w-screen py-[60px]'>
+    <div className='footer bg-gray-100 w-screen py-[60px]'>
         <div className='footer-container px-5 mx-auto'>
 
               {/* <img src={logo} className='footer-logo' /> */}

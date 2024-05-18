@@ -6,7 +6,7 @@
 
 
 :root {
-  --text: rgb(30, 30, 54);
+  --text: rgb(43, 43, 62);
   --primaryAccent: rgb(167, 210, 178);
   --secondaryAccent: #53212F;
 }
@@ -27,13 +27,14 @@ p{
   font-family: 'Poppins';
   font-family: var(--font-poppins);
   font-size: 18px;
+  margin-top: 20px;
 }
 h1{
   font-family: 'Poppins';
   font-family: var(--font-poppins);
   font-size: 24px;
   margin-bottom: 20px;
-  color: var(--secondaryAccent)
+  /* color: var(--secondaryAccent) */
 }
 h2{
   font-family: 'Poppins';
@@ -41,7 +42,6 @@ h2{
   font-weight: bold;
   color: var(--text);
   font-size: 24px;
-  margin-bottom: 10px;
 }
 h3{
   font-family: 'poppins';
