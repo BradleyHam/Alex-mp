@@ -4,49 +4,45 @@ import Footer from '@/app/SiteComponents/Footer'
 import GetInvolvedBanner from '@/app/SiteComponents/GetInvolvedBanner'
 import manifesto from '@/app/manifesto'
 import {useState} from 'react'
+import FilterRow from './Filter-row'
 
+const formatTextAsParagraphs = (text) => {
+    return text.split('\n\n').map((paragraph, index) => (
+        <p className='' key={index}>{paragraph}</p>
+    ));
+};
+
+const ManifestoSection = ({ section }) => {
+    return (
+        <div>
+            {formatTextAsParagraphs(section)}
+        </div>
+    );
+};
 
 export default function ActionPlan() {
     const manifestoAreasOfFocus = Object.keys(manifesto.howIWillVote);
-    const [activeAction, setActiveAction] = useState(manifestoAreasOfFocus[0]);
+    const [activeAreaOfFocus, setactiveAreaOfFocus] = useState(manifestoAreasOfFocus[0]);
     return (
         <div>
             <Navbar />
-            {/* <div className='pt-[160px] px-4 container max-w-4xl  mx-auto'>
+            <div className='pt-[160px] px-4 container max-w-4xl  mx-auto'>
                 <h1 className='text-2xl lg:text-3xl font-bold tracking-tight '>Overview</h1>
                 <p className='mb-[120px]  mt-[40px]'>
-
-                    {manifesto.overview}
+                    <ManifestoSection section={manifesto.overview}/>
                 </p>
-               
              </div>
-             <div className='bg-gray-200'>
+             <div className='bg-gray-50 px-4'>
                 <div className='container mx-auto  py-[120px]'>
                     <h2>Once elected, how will I vote on major issues?</h2>
-                    <div className='grid grid-cols-8 gap-8 pt-[60px]'>
-    <div className='filter-row col-span-2 overflow-x-hidden flex-wrap'>
-        {manifestoAreasOfFocus.map(action => {
-            return (
-                <div 
-                    onClick={() => setActiveAction(action)} 
-                    className={`filter-item px-4 py-2 cursor-pointer capitalize ${activeAction === action ? 'activeAction' : ''}`}
-                >
-                    {action}
-                </div>
-            );
-        })}
-    </div>
-    <div className='col-span-6'>
-         {manifesto.howIWillVote[activeAction]}
-    </div>
-</div>
-
-                
-               
-                 
+                    <div className='grid grid-cols-8 gap-8 pt-[40px] lg:pt-[80px]'>
+                    <FilterRow setactiveAreaOfFocus={setactiveAreaOfFocus} activeAreaOfFocus={activeAreaOfFocus} manifestoAreasOfFocus={manifestoAreasOfFocus}/>
+                    <div className='col-span-8 bg-white p-4 px-8 pb-8 rounded-lg lg:col-span-6 -mt-[20px] shadow-xl'>
+                        <ManifestoSection section={manifesto.howIWillVote[activeAreaOfFocus]}/>
                     </div>
+                    </div>
+                </div>
              </div>
-            */}
           <GetInvolvedBanner />
           <Footer />
         </div>

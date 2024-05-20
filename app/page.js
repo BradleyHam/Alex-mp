@@ -8,22 +8,26 @@ import NewsSection from "./HomeComponents/NewsSection";
 import ConnectSection from "./HomeComponents/ConnectSection";
 import Footer from "./SiteComponents/Footer";
 
-import {getHomePage, getNewsPosts} from "../sanity/utils";
+import {getHomePage, getNewsPosts, getAboutPage} from "../sanity/utils";
+import WhyVoteAlex from "./about/WhyVoteAlex";
+import GetInvolvedBanner from "./SiteComponents/GetInvolvedBanner";
 
 export default async function Home() {
   const homeContent = await getHomePage();
   const newsPosts = await getNewsPosts();
+  const aboutData = await getAboutPage();
   const firstThreePosts = newsPosts.slice(0, 3);
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <Navbar />
       <Hero />
-      <MissionSection missionStatement={homeContent.missionStatement} missionStatementHeading={homeContent.missionStatementHeading}/>
+      <WhyVoteAlex points={aboutData.whyVotePoints} whyVoteHeading={aboutData.whyVoteHeading}/>
+      {/* <MissionSection missionStatement={homeContent.missionStatement} missionStatementHeading={homeContent.missionStatementHeading}/> */}
       <Policies areasOfFocus={homeContent.areasOfFocus} areasOfFocusHeading={homeContent.areasOfFocusHeading}/>
-      <GetInvolved heading={homeContent.getInvolvedHeading} donateInstructions={homeContent.donateInstructions} volunteerHeading={homeContent.volunteerHeading} voteInstructions={homeContent.voteInstructions} linkToVote={homeContent.linkToVote} linkToDonate={homeContent.linkToDonate}/>
       <NewsSection newsHeading={homeContent.newsHeading} newsPosts={firstThreePosts}/>
       <ConnectSection contactHeading={homeContent.contactSectionHeading}/>
+      <GetInvolvedBanner />
       <Footer />
     </main>
   );

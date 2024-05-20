@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function NewsArticleCard({image, title, description, date, slug}) {
 
     return (
-        <div className="news-article-card  bg-white px-4 py-4 border rounded-lg mt-4 flex-1">
+        <div className="news-article-card  bg-white px-4 py-4 border rounded-lg mt-4 flex-1 shadow-xl">
            <div className='container flex flex-col'>
             <div className="image  h-[200px] w-full relative">
                 <Image src={`${image}`} layout='fill' objectFit='cover' alt='something'/>

@@ -9,8 +9,8 @@ export default function GetInvolved({heading, donateInstructions, volunteerHeadi
     return (
         <div className="get-involved px-5 py-[80px] w-screen">
             <div className="container mx-auto max-w-4xl">
-            <h2 className='mb-[20px] tracking-tight text-lg lg:text-2xl lg:text-center lg:mb-[30px]'>{heading}</h2>
-            <div className="filter-row flex space-x-2 lg:w-full lg:justify-center">
+            <h2 className='mb-[20px] tracking-tight text-lg lg:text-2xl  lg:mb-[30px]'>{heading}</h2>
+            <div className="filter-row flex space-x-2 lg:w-full ">
                 {actions.map((action) => {
                     return <div key={action} onClick={() => setActiveAction(action)} className={`filter-item px-4 py-2 cursor-pointer capitalize ${activeAction === action ? 'activeAction' : ''}`}>{action}</div>
                 })}

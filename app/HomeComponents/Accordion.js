@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { FaArrowRight, FaChevronDown } from 'react-icons/fa6'
 import SecondaryButton from '../SiteComponents/SecondaryButton'
+import Link from 'next/link'
 
 function Accordion({ items }) {
   const [currentIndex, setCurrentIndex] = useState(null)
@@ -30,13 +31,15 @@ function Accordion({ items }) {
             <div className="">
               <div className="problem-container mb-[20px]">
                   <h4 className='font-bold'>Problem</h4>
-                  <p className='font-md text-base opacity-80'>{item.problem}</p>
+                  <p className='font-md text-base opacity-80 mt-2'>{item.problem}</p>
               </div>
               <div className="proposed-solution-container">
                 <h4>Proposed Solution</h4>
-                <p className='text-base opacity-80'>{item.proposedSolution}</p>
+                <p className='text-base opacity-80 mt-2'>{item.proposedSolution}</p>
               </div>
-              <SecondaryButton text='Learn more'/>
+              <Link href={'/action-plan'}>
+                <SecondaryButton text='Learn more'/>
+              </Link>
             </div>
           )}
         </div>

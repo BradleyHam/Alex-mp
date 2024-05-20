@@ -15,7 +15,7 @@ export default async function News(){
             <div className="container mx-auto pt-[80px]">
             <h2 className="text-lg lg:text-2xl lg:text-left lg:mb-[30px]">Keep up to date with our news </h2>
           
-            <div className="flex flex-col flex-wrap items-center items-stretch lg:grid lg:grid-cols-3 lg:gap-4">
+            <div className="flex flex-col flex-wrap items-center items-stretch lg:grid lg:grid-cols-3 lg:gap-2">
                 {
                     newsData.map((article, index) => <NewsArticleCard key={index} image={article.postImage ? article.postImage : ''}  title={article.postTitle} date={article.date} slug={article.slug} description={article.shortDescription}/>)
                 }
