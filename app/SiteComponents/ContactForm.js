@@ -30,32 +30,32 @@ export default function ContactForm({ nameField, emailField, phoneField, message
         return re.test(String(email).toLowerCase());
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setFeedbackMessage(''); // Clear any previous feedback message
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     setFeedbackMessage(''); // Clear any previous feedback message
 
-        if (!name || !email) {
-            setFeedbackMessage('Name and Email are required fields.');
-            return;
-        }
+    //     if (!name || !email) {
+    //         setFeedbackMessage('Name and Email are required fields.');
+    //         return;
+    //     }
 
-        if (!validateEmail(email)) {
-            setFeedbackMessage('Please enter a valid email address.');
-            return;
-        }
+    //     if (!validateEmail(email)) {
+    //         setFeedbackMessage('Please enter a valid email address.');
+    //         return;
+    //     }
 
-        setIsSubmitting(true);
-        setButtonText('Sending...');
+    //     setIsSubmitting(true);
+    //     setButtonText('Sending...');
 
-        const templateParams = {
-            from_name: name,
-            from_email: email,
-            phone,
-            message,
-            to_email: 'info@alexmartinmp.co.uk'
-        };
+    //     const templateParams = {
+    //         from_name: name,
+    //         from_email: email,
+    //         phone,
+    //         message,
+    //         to_email: 'info@alexmartinmp.co.uk'
+    //     };
 
-        console.log(templateParams)
+    //     console.log(templateParams)
 
     //     emailjs.send('service_1g86gix', `${toVolunteer ? 'template_v18snvp' : 'template_dx6ucri'}`, templateParams, 'AjNIKXDaQ8o1OP17y')
     //         .then((response) => {
