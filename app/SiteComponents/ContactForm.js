@@ -57,22 +57,22 @@ export default function ContactForm({ nameField, emailField, phoneField, message
 
         console.log(templateParams)
 
-        emailjs.send('service_1g86gix', `${toVolunteer ? 'template_v18snvp' : 'template_dx6ucri'}`, templateParams, 'AjNIKXDaQ8o1OP17y')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                setButtonText('Sent!');
-                setIsSubmitting(false);
-                setName('');
-                setEmail('');
-                setPhone('');
-                setMessage('');
-            }, (error) => {
-                console.log('FAILED...', error);
-                setButtonText('Send');
-                setIsSubmitting(false);
-                setFeedbackMessage('Failed to send your message. Please try again later.');
-            });
-    };
+    //     emailjs.send('service_1g86gix', `${toVolunteer ? 'template_v18snvp' : 'template_dx6ucri'}`, templateParams, 'AjNIKXDaQ8o1OP17y')
+    //         .then((response) => {
+    //             console.log('SUCCESS!', response.status, response.text);
+    //             setButtonText('Sent!');
+    //             setIsSubmitting(false);
+    //             setName('');
+    //             setEmail('');
+    //             setPhone('');
+    //             setMessage('');
+    //         }, (error) => {
+    //             console.log('FAILED...', error);
+    //             setButtonText('Send');
+    //             setIsSubmitting(false);
+    //             setFeedbackMessage('Failed to send your message. Please try again later.');
+    //         });
+    // };
 
     return (
         <div>
