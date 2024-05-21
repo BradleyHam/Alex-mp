@@ -76,7 +76,7 @@ export default function ContactForm({ nameField, emailField, phoneField, message
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form>
                 {nameField && (
                     <input
                         type="text"
