@@ -30,22 +30,22 @@ export default function Navbar() {
                 <div className="h-full container px-4 mx-auto my-auto flex flex-row justify-between items-center text-white">
                     <div className="navlinks flex items-center h-full">
                         <div className='flex flex-row space-x-6 items-center'>
-                            <ul className="flex-row space-x-8 items-center font-lato hidden lg:flex">
+                            <ul className="flex-row space-x-8   items-center font-lato hidden lg:flex">
                                 <Link href="/">
                                     <li className={`${currentRoute === '/' ? 'font-bold' : ''}`}>Home</li>
                                 </Link>
                                 <Link href="/about">
                                     <li className={`${currentRoute === '/about' ? 'font-bold' : ''}`}>About Alex</li>
                                 </Link>
-                                <Link href="/action-plan">
-                                    <li className={`${currentRoute === '/action-plan' ? 'font-bold' : ''}`}>Action Plan</li>
+                                <Link href="/manifesto">
+                                    <li className={`${currentRoute === '/manifesto' ? 'font-bold' : ''}`}>Manifesto</li>
                                 </Link>
                                 <Link href="/get-involved">
                                     <li className={`${currentRoute === '/get-involved' ? 'font-bold' : ''}`}>Get Involved</li>
                                 </Link>
-                                <Link href="/news">
+                                {/* <Link href="/news">
                                     <li className={`${currentRoute.startsWith('/news') ? 'font-bold' : ''}`}>News</li>
-                                </Link>
+                                </Link> */}
                                 <Link href="/contact">
                                     <li className={`${currentRoute === '/contact' ? 'font-bold' : ''}`}>Contact</li>
                                 </Link>
@@ -66,15 +66,15 @@ export default function Navbar() {
                     <Link href="/about">
                         <li className={`${currentRoute === '/about' ? 'font-bold' : ''}`}>About Me</li>
                     </Link>
-                    <Link href="/action-plan">
-                                    <li className={`${currentRoute === '/action-plan' ? 'font-bold' : ''}`}>Action Plan</li>
+                    <Link href="/manifesto">
+                                    <li className={`${currentRoute === '/manifesto' ? 'font-bold' : ''}`}>Manifesto</li>
                                 </Link>
                     <Link href="/get-involved">
                         <li className={`${currentRoute === '/get-involved' ? 'font-bold' : ''}`}>Get Involved</li>
                     </Link>
-                    <Link href="/news">
+                    {/* <Link href="/news">
                         <li className={`${currentRoute.startsWith('/news') ? 'font-bold' : ''}`}>News</li>
-                    </Link>
+                    </Link> */}
                     <Link href="/contact">
                         <li className={`${currentRoute === '/contact' ? 'font-bold' : ''}`}>Contact</li>
                     </Link>

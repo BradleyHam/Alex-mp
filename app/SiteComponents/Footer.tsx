@@ -9,12 +9,12 @@ const iconColor = '#53212F';
 function Footer() {
   return (
   
-    <div className='footer bg-gray-100 w-screen py-[60px]'>
+    <div className='footer bg-gray-800 w-screen py-[20px] text-white'>
         <div className='footer-container px-5 mx-auto'>
 
               {/* <img src={logo} className='footer-logo' /> */}
 
-            <div className='socials flex items-center space-x-4 justify-center'>
+            {/* <div className='socials flex items-center space-x-4 justify-center'>
                 <a className='facebook'  >
                 <FaFacebookF size={iconSize} color={iconColor}/>
                 </a>
@@ -24,9 +24,9 @@ function Footer() {
                 <a className='instagram' >
                 <FaLinkedin size={iconSize} color={iconColor}/>
               </a> 
-            </div>
+            </div> */}
         </div>
-        <div className='bottom-footer mx-auto text-center mt-[40px] font-primary'>
+        <div className='bottom-footer mx-auto text-center  font-primary text-sm font-light'>
         &copy; 2024 | Alexander Martin Campaign | Website by Vision Webworks
         </div>
    </div>

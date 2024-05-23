@@ -4,8 +4,8 @@ import Vote from './Vote'
 import Volunteer from './Volunteer'
 import Donate from './Donate'
 export default function GetInvolved({heading, donateInstructions, volunteerHeading, voteInstructions, linkToVote, linkToDonate}) {
-    const [activeAction, setActiveAction] = useState('vote')
-    const actions = ['vote', 'volunteer', 'donate']
+    const [activeAction, setActiveAction] = useState('volunteer')
+    const actions = [ 'volunteer', 'donate']
     return (
         <div className="get-involved px-5 py-[80px] w-screen">
             <div className="container mx-auto max-w-4xl">

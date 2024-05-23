@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import SecondaryButton from '../SiteComponents/SecondaryButton';
+import ButtonPrimary from '@/app/SiteComponents/ButtonPrimary';
 import emailjs from 'emailjs-com';
 
 export default function ContactForm({ nameField, emailField, phoneField, messageField, toVolunteer }) {
@@ -8,7 +9,7 @@ export default function ContactForm({ nameField, emailField, phoneField, message
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
-    const [buttonText, setButtonText] = useState('Send');
+    const [buttonText, setButtonText] = useState('Submit');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [feedbackMessage, setFeedbackMessage] = useState('');
 
@@ -123,7 +124,9 @@ export default function ContactForm({ nameField, emailField, phoneField, message
                         rows="4"
                     />
                 )}
-                <SecondaryButton text={buttonText} disabled={isSubmitting} />
+                <div className='mt-8 mb-8'>
+                <ButtonPrimary text={buttonText} disabled={isSubmitting} />
+                </div>
             </form>
             {feedbackMessage && (
                 <p className={`mt-0 text-${isSubmitting ? 'blue' : feedbackMessage.includes('successfully') ? 'green' : 'red'}-600`}>

@@ -45,9 +45,9 @@ export default function Policies({areasOfFocus, areasOfFocusHeading}) {
     
     ]
     return (
-        <div className="policies px-5 lg:px-0 py-[80px] bg-gray-50 w-screen">
+        <div className="policies px-5 lg:px-0 py-[80px] bg-white w-screen">
             <div className="container mx-auto lg:max-w-4xl">
-            <h2 className="mb-[20px] font-bold text-lg lg:text-2xl tracking-tight mb-[24px] lg:mb-[40px] lg:text-center">{areasOfFocusHeading}</h2>
+            <h2 className="lg:text-3xl mt-8 lg:mt-0 mb-8    tracking-tight  text-secondaryAccent">{areasOfFocusHeading}</h2>
            <div className="w-full">
             <Accordion items={policies}/>
             </div>

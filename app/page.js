@@ -7,25 +7,29 @@ import GetInvolved from "./HomeComponents/GetInvolved";
 import NewsSection from "./HomeComponents/NewsSection";
 import ConnectSection from "./HomeComponents/ConnectSection";
 import Footer from "./SiteComponents/Footer";
+import WhyVoteAlex from "./about/WhyVoteAlex";
+import WhyNotTories from "./about/WhyNotTories";
+import GetInvolvedBanner from "./SiteComponents/GetInvolvedBanner";
+
 
 import {getHomePage, getNewsPosts, getAboutPage} from "../sanity/utils";
-import WhyVoteAlex from "./about/WhyVoteAlex";
-import GetInvolvedBanner from "./SiteComponents/GetInvolvedBanner";
+
 
 export default async function Home() {
   const homeContent = await getHomePage();
   const newsPosts = await getNewsPosts();
   const aboutData = await getAboutPage();
-  const firstThreePosts = newsPosts.slice(0, 3);
+  console.log(homeContent.whyNotLabour)
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <Navbar />
       <Hero />
       <WhyVoteAlex points={aboutData.whyVotePoints} whyVoteHeading={aboutData.whyVoteHeading}/>
+      <WhyNotTories  whyNotLabour={homeContent.whyNotLabour}/>
       {/* <MissionSection missionStatement={homeContent.missionStatement} missionStatementHeading={homeContent.missionStatementHeading}/> */}
       <Policies areasOfFocus={homeContent.areasOfFocus} areasOfFocusHeading={homeContent.areasOfFocusHeading}/>
-      <NewsSection newsHeading={homeContent.newsHeading} newsPosts={firstThreePosts}/>
+      {/* <NewsSection newsHeading={homeContent.newsHeading} newsPosts={firstThreePosts}/> */}
       <ConnectSection contactHeading={homeContent.contactSectionHeading}/>
       <GetInvolvedBanner />
       <Footer />

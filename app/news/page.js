@@ -10,7 +10,7 @@ export default async function News(){
 
     return (
         <div>
-        <Navbar />
+        {/* <Navbar />
         <div className="news w-full px-5 py-[80px] bg-gray-50">
             <div className="container mx-auto pt-[80px]">
             <h2 className="text-lg lg:text-2xl lg:text-left lg:mb-[30px]">Keep up to date with our news </h2>
@@ -23,7 +23,7 @@ export default async function News(){
             </div>
         </div>
         <GetInvolvedBanner />
-        <Footer />
+        <Footer /> */}
         </div>
     )
 }

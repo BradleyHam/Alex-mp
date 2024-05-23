@@ -17,8 +17,7 @@ export default async function about (){
             <Navbar/>
             <div className="about-content pt-[80px] bg-gray-50"> 
                 <AboutSection aboutTitle={aboutData.aboutTitle} about={aboutData.about} image={aboutData.aboutImage} />
-               
-                <WhyNotTories  points={aboutData.whyNotPoints} heading={aboutData.whyNotToriesHeading}/>
+                
                 <GetInvolvedBanner text='Get Involved'/>
             </div>
             <Footer />

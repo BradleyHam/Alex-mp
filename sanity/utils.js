@@ -25,7 +25,8 @@ export async function getHomePage() {
         newsHeading,
         contactSectionHeading,
         linkToVote,
-        linkToDonate
+        linkToDonate,
+        whyNotLabour
       }[0]`,{},
     {next: {
       revalidate: 1 
@@ -120,3 +121,30 @@ export async function fetchPostBySlug(slug) {
     return null; // Return null in case of an error
   }
 }
+
+// get manifesto
+
+export async function getManifesto() {
+  try {
+    const projects = await client.fetch(groq`
+      *[_type == "manifesto"][0]{
+        introHeading,
+        intro,
+        howWillIVote,
+        "howWillIVoteTitles": howWillIVote[].title,
+        
+      }
+    `, {},
+    {
+      next: {
+        revalidate: 10 
+      }
+    });
+
+    return projects;
+  } catch (error) {
+    console.error("Error fetching manifesto:", error);
+    return {}; // Return an empty object in case of an error
+  }
+}
+

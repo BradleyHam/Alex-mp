@@ -24,7 +24,7 @@ function Accordion({ items }) {
             </h3>
             </div>
             <div className={`transform-chevron-180 ${index === currentIndex ? 'rotate-180' : ''}`}>
-              <FaChevronDown />
+              <FaChevronDown arrow/>
             </div>
           </div>
           {currentIndex === index && (
@@ -38,7 +38,7 @@ function Accordion({ items }) {
                 <p className='text-base opacity-80 mt-2'>{item.proposedSolution}</p>
               </div>
               <Link href={'/action-plan'}>
-                <SecondaryButton text='Learn more'/>
+                <SecondaryButton text='Learn more' arrow/>
               </Link>
             </div>
           )}

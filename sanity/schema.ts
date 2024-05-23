@@ -55,6 +55,29 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           ]
         },
         {
+          title: 'Why Not Labour Points',
+          name: 'whyNotLabour',
+          type: 'array',
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  title: "Title",
+                  name: "title",
+                  type: "string"
+                },
+                {
+                  title: "Description",
+                  name: "description",
+                  type: "text"
+                }
+              ]
+            }
+          ]
+        
+        },
+        {
           title: "Get Involved Heading",
           name: "getInvolvedHeading",
           type: "text"
@@ -197,9 +220,67 @@ export const schema: { types: SchemaTypeDefinition[] } = {
             {
               type: 'block'
             }
-          ]}
+          ]
+        }
       ]
     },
+    {
+      title: "Manifesto",
+      name: "manifesto",
+      type: "document",
+      fields: [
+        {
+          title: "Manifesto Intro Heading",
+          name: "introHeading",
+          type: "text"
+        },  
+        {
+          title: "Manifesto Intro Text",
+          name: "intro",
+          type: "array",
+          of: [
+            {
+              type: 'block'
+            }
+          ]
+        },  
+        {
+          title: "How Will I Vote",
+          name: "howWillIVote",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  title: "Title",
+                  name: "title",
+                  type: "string"
+                },
+                {
+                  title: "Description",
+                  name: "description",
+                  type: "array",
+                  of: [
+                    {
+                      type: 'block'
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      preview: {
+        prepare() {
+          return {
+            title: 'Manifesto'  // Static title for all documents of this type
+          }
+        }
+      }
+    },
+    
 
 
     // Contact Page Schema
