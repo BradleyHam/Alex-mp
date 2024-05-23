@@ -9,7 +9,7 @@ export default function AboutSection({aboutTitle, about, image}: {aboutTitle: st
                 <h2 className="text-3xl mt-8 mb-4 text-secondaryAccent tracking-tight">{aboutTitle}</h2>
                 <p className='text-lg'>{about}</p>
             </div>
-            <div className="  lg:flex-1 order-first w-[100%] ">
+            <div className="     lg:flex-1 order-first w-[100%] ">
             <div className="image-side lg:mr-4 relative lg:flex-1 h-[400px] w-[100%] order-first">
                 <Image src='/images/alex-mp-3.jpeg'  layout='fill' objectFit='cover' objectPosition='50% calc(50% - 80px)' alt='something'/>
             </div>

@@ -14,12 +14,12 @@ export default function WhyVoteAlex({points, whyVoteHeading}: {points: string[],
                          <Image src='/images/alex-mp-7.jpeg'  layout='fill'  alt='something' objectPosition="top" objectFit='cover'/> 
                         </div>
                     </div>
-                    <p className="quote-one italic text-xl font-light opacity-80"><span className="text-3xl font-bold text-primaryAccent">"</span>I'm dismayed by the quality of many elected representatives. I want to bring honesty, integrity,
-and selfless commitment, back into politics<span className="text-3xl font-bold text-primaryAccent">"</span></p>
-                    <p className="quote-two italic text-xl font-light opacity-80"><span className="text-3xl font-bold text-primaryAccent">"</span>This is the constituency I live in,
+                    <p className="quote-one italic text-xl font-light opacity-80"><span className="text-3xl font-bold text-primaryAccent">&quot;</span>I&apos;m dismayed by the quality of many elected representatives. I want to bring honesty, integrity,
+and selfless commitment, back into politics<span className="text-3xl font-bold text-primaryAccent">&quot;</span></p>
+                    <p className="quote-two italic text-xl font-light opacity-80"><span className="text-3xl font-bold text-primaryAccent">&quot;</span>This is the constituency I live in,
 and I have a deep affection for
 the city of Edinburgh,
-where I call home<span className="text-3xl font-bold text-primaryAccent">"</span></p>
+where I call home<span className="text-3xl font-bold text-primaryAccent">&quot;</span></p>
                 </div>
                 <div className="text-side lg:flex-1 order-first max-w-3xl mx-auto flex flex-col items-start">
                 <h2 className="lg:text-3xl mt-8 lg:mt-0 mb-8    tracking-tight text-center text-secondaryAccent">{whyVoteHeading}</h2>
