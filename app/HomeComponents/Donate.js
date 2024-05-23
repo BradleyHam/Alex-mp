@@ -8,7 +8,7 @@ export default function Donate({donateInstructions, linkToDonate}) {
             <p className="text-base lg:text-lg mb-8 opacity-80">Support our campaign and make a difference in Edinburgh South! Your donation will help us bring integrity, honesty, and a strong commitment to the community back into politics. Together, we can build a fairer society, protect our environment, and ensure that the voices of the people are heard. Every contribution, no matter how small, makes a significant impact. Click here to donate and join us in driving real change for a better future!
             </p>
             <div className="mb-4">
-                <Link href={linkToDonate}>
+                <Link href='https://www.gofundme.com/manage/3ud6r-help-us-make-a-difference/edit'>
                     <ButtonPrimary text='donate now' />
                 </Link>
             </div>
