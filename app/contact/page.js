@@ -14,18 +14,17 @@ export default async function Contact(){
         <div>
             <Navbar/>
             <div className="pt-[160px]">
-                <div className="container mx-auto px-4">
-                  <h1 className="text-2xl lg:text-3xl font-bold tracking-tight ">{pageContent.contactPageHeading}</h1>
-                  <div className="lg:px-0">
+                <div className="container mx-auto px-5 pb-[80px]">
+                  <h2 className="text-2xl lg:text-3xl lg:mt-8 lg:mt-0 mb-[30px]    tracking-tight text-secondaryAccent lg:text-left ">{pageContent.contactPageHeading}</h2>
+                  <div className="lg:px-0 leading-loose lg:leading-loose">
                     <PortableText value={pageContent.contactDetails} />
                 </div>
                 </div>
             </div>
-            <div className="contact-form-section bg-gray-50 mt-[80px] px-5 py-[70px] ] w-full">
+            <div className="contact-form-section bg-gray-50 px-5 py-[80px] w-full">
             <div className="container mx-auto max-w-2xl">
-            <h2 className='font-bold text-lg lg:text-2xl mb-[20px] lg:text-left lg:mb-[30px]'>{pageContent.contactFormHeading}</h2>
-        
-            <ContactForm nameField emailField messageField formFor='general message'/>
+            <h2 className='text-2xl lg:text-3xl lg:mt-8 lg:mt-0 mb-[40px]    tracking-tight  text-secondaryAccent lg:text-left'>{pageContent.contactFormHeading}</h2>
+                <ContactForm nameField emailField messageField formFor='general message'/>
             </div>
         </div>
         <GetInvolvedBanner />

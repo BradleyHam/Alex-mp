@@ -9,9 +9,18 @@
   --text: rgb(43, 43, 62);
   --primaryAccent: rgb(167, 210, 178);
   --secondaryAccent: #53212F;
+  font-family: var(--font-poppins);
+}
+button{
+  font-family: 'Poppins';
+  font-family: var(--font-poppins);
+}
+span{
+  font-family: 'Poppins';
+  font-family: var(--font-poppins);
 }
 body {
-  color: var(--text);
+  color: var(--text); 
   font-family: 'Poppins';
   font-family: var(--font-poppins);
 }
@@ -72,7 +81,7 @@ button{
 }
 
 .hero-top-level{
-  background-image: url('/images/alex-mp-2.jpeg');
+  background-image: url('/images/alex-mp-2.webp');
   background-position: calc(50% - 100px) 50%; 
  
 }

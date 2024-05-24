@@ -11,8 +11,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Alex For MP",
-  description: "Alex Marting for MP in Edinburgh South election",
+  title: "Alexander Martin For MP, Edinburgh South",
+  description: "Alexander Martin for MP in Edinburgh South election",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -22,6 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
+     
       <body>{children}</body>
     </html>
   );

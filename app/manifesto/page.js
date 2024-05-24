@@ -8,20 +8,6 @@ import { getManifesto } from '@/sanity/utils'
 import { PortableText } from '@portabletext/react';
 
 
-const formatTextAsParagraphs = (text) => {
-    return text.split('\n\n').map((paragraph, index) => (
-        <p className='' key={index}>{paragraph}</p>
-    ));
-};
-
-const ManifestoSection = ({ section }) => {
-    return (
-        <div>
-            {formatTextAsParagraphs(section)}
-        </div>
-    );
-};
-
 export default async function Manifesto() {
     const manifesto = await getManifesto();
     const areasOfFocus = manifesto.howWillIVote
@@ -30,8 +16,8 @@ export default async function Manifesto() {
         <div>
             <Navbar />
             <div className='pt-[160px] px-4 container max-w-4xl  mx-auto'>
-                <h1 className='text-2xl lg:text-3xl font-bold tracking-tight '>{manifesto.introHeading}</h1>
-                <div className='mb-[120px]  mt-[40px]'>
+                <h2 className='text-2xl lg:text-3xl lg:mt-8 lg:mt-0 mb-[40px]    tracking-tight text-center text-secondaryAccent lg:text-left'>Working for Edinburgh South</h2>
+                <div className='mb-[80px] lg:mb-[120px] mt-[40px] text-center lg:text-left'>
                      
                         <PortableText value={manifesto.intro}/>
                     

@@ -26,7 +26,7 @@ export default function Navbar() {
 
     return (
         <div>
-            <div className={`navbar w-screen ${scrolled ? 'bg-gray-100' : ''} transition-colors duration-300 fixed top-0 right-0 left-0 h-[80px] z-50`}>
+            <div className={`navbar w-screen ${scrolled || open ? 'bg-gray-100' : ''}   fixed top-0 right-0 left-0 h-[80px] z-50`}>
                 <div className="h-full container px-4 mx-auto my-auto flex flex-row justify-between items-center text-white">
                     <div className="navlinks flex items-center h-full">
                         <div className='flex flex-row space-x-6 items-center'>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 </div>
             </div>
             {open && (
-                <ul className={'mobile-nav bg-gray-100 z-30 transition-colors duration-300 flex flex-col items-start space-y-4 px-5 py-10 pt-10 w-screen fixed pt-[100px] left-0 lg:hidden'}>
+                <ul className={'mobile-nav bg-gray-100 z-30 transition-colors duration-300 flex flex-col items-start space-y-4 px-5 py-10 pt-10 w-screen fixed pt-[100px] top-0 left-0 lg:hidden'}>
                     <Link href="/">
                         <li className={`${currentRoute === '/' ? 'font-bold' : ''}`}>Home</li>
                     </Link>

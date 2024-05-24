@@ -10,6 +10,7 @@ import Footer from "./SiteComponents/Footer";
 import WhyVoteAlex from "./about/WhyVoteAlex";
 import WhyNotTories from "./about/WhyNotTories";
 import GetInvolvedBanner from "./SiteComponents/GetInvolvedBanner";
+import FAQ from '@/app/HomeComponents/FAQ'
 
 
 import {getHomePage, getNewsPosts, getAboutPage} from "../sanity/utils";
@@ -30,8 +31,10 @@ export default async function Home() {
       {/* <MissionSection missionStatement={homeContent.missionStatement} missionStatementHeading={homeContent.missionStatementHeading}/> */}
       <Policies areasOfFocus={homeContent.areasOfFocus} areasOfFocusHeading={homeContent.areasOfFocusHeading}/>
       {/* <NewsSection newsHeading={homeContent.newsHeading} newsPosts={firstThreePosts}/> */}
+      <FAQ />
       <ConnectSection contactHeading={homeContent.contactSectionHeading}/>
       <GetInvolvedBanner />
+      
       <Footer />
     </main>
   );
