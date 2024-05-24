@@ -6,9 +6,9 @@ export default async function getInvolved(){
     const homeContent = await getHomePage();
   
     return (
-        <div>
+        <div className=''>
             <Navbar />
-            <div className='mt-[80px]'>
+            <div className='mt-[80px] min-h-screen'>
                 <GetInvolved heading={homeContent.getInvolvedHeading} donateInstructions={homeContent.donateInstructions} volunteerHeading={homeContent.volunteerHeading} voteInstructions={homeContent.voteInstructions} linkToVote={homeContent.linkToVote} linkToDonate={homeContent.linkToDonate}/>
             </div>
             <Footer />
