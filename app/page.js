@@ -18,9 +18,7 @@ import {getHomePage, getNewsPosts, getAboutPage} from "../sanity/utils";
 
 export default async function Home() {
   const homeContent = await getHomePage();
-  const newsPosts = await getNewsPosts();
   const aboutData = await getAboutPage();
-  console.log(homeContent.whyNotLabour)
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">

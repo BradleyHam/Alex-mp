@@ -37,7 +37,7 @@ function Accordion({ items }) {
                 <h4>Proposed Solution</h4>
                 <p className='text-base opacity-80 mt-2'>{item.proposedSolution}</p>
               </div>
-              <Link href={'/action-plan'}>
+              <Link href={'/manifesto'}>
                 <SecondaryButton text='Learn more' arrow/>
               </Link>
             </div>
