@@ -7,7 +7,7 @@ export default function AboutSection({aboutTitle, about, image}: {aboutTitle: st
         <div className="container mx-auto flex flex-col lg:flex lg:flex-row lg:space-x-4 mx-auto my-auto items-center relative">
             <div className="text-side flex-1 lg:ml-8">
                 <h2 className="text-2xl lg:text-3xl lg:mt-8 lg:mt-0 mt-[40px]    tracking-tight text-center text-secondaryAccent lg:text-left">{aboutTitle}</h2>
-                <p className='text-lg text-center lg:text-left'>{about}</p>
+                <p className='text-lg text-left lg:text-left'>{about}</p>
             </div>
             <div className="     lg:flex-1 order-first w-[100%] ">
             <div className="image-side lg:mr-4 relative lg:flex-1 h-[400px] w-[100%] order-first">
