@@ -13,7 +13,7 @@ export default function AboutSection({aboutTitle, about, image}: {aboutTitle: st
             <div className="image-side lg:mr-4 relative lg:flex-1 h-[400px] w-[100%] order-first">
                 <Image src='/images/alex-mp-3.webp'  layout='fill' objectFit='cover' objectPosition='50% calc(50% - 80px)' alt='something'/>
             </div>
-          </div>
+        </div>
           </div>
        </div>
     )
