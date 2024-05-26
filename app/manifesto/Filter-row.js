@@ -6,7 +6,7 @@ export default function FilterRow({ setactiveAreaOfFocus, activeAreaOfFocus, are
    return (
     <div className='filter-row  overflow-x-hidden flex-wrap lg:relative flex '>
         {areasOfFocus.map((area, index) => (
-           <div key={index} onClick={() => setactiveAreaOfFocus(area)} className={activeAreaOfFocus === area ? `px-4 py-2 cursor-pointer capitalize bg-primaryAccent m-1 rounded` : `px-4 py-2 cursor-pointer capitalize bg-gray-100 m-1 rounded`}>
+           <div key={index} onClick={() => setactiveAreaOfFocus(area)} className={activeAreaOfFocus === area ? `px-4 py-2 cursor-pointer font-semibold capitalize bg-primaryAccent m-1 rounded` : `px-4 py-2 cursor-pointer capitalize bg-gray-100 m-1 rounded`}>
                 {area.title}
            </div>
         ))}
