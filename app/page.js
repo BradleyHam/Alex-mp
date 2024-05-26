@@ -11,6 +11,7 @@ import WhyVoteAlex from "./about/WhyVoteAlex";
 import WhyNotTories from "./about/WhyNotTories";
 import GetInvolvedBanner from "./SiteComponents/GetInvolvedBanner";
 import FAQ from '@/app/HomeComponents/FAQ'
+import Modal from '@/app/SiteComponents/Modal';
 
 
 import {getHomePage, getNewsPosts, getAboutPage} from "../sanity/utils";
@@ -19,6 +20,7 @@ import {getHomePage, getNewsPosts, getAboutPage} from "../sanity/utils";
 export default async function Home() {
   const homeContent = await getHomePage();
   const aboutData = await getAboutPage();
+
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
@@ -34,6 +36,7 @@ export default async function Home() {
       <GetInvolvedBanner />
       
       <Footer />
+      <Modal />
     </main>
   );
 }

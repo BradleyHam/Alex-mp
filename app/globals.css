@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Import Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* No need to import the font from Google Fonts here since it's handled by next/font */
 
 :root {
   --text: rgb(43, 43, 62);
