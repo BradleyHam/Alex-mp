@@ -63,7 +63,8 @@ export default function ContactForm({ nameField, emailField, phoneField, message
             from_email: email,
             phone,
             message,
-            'g-recaptcha-response': captchaToken, // Include the reCAPTCHA token
+            reply_to: email, 
+            'g-recaptcha-response': captchaToken,
         };
 
         console.log(templateParams)

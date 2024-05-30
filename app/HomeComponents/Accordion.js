@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { FaArrowRight, FaChevronDown } from 'react-icons/fa6'
 import SecondaryButton from '../SiteComponents/SecondaryButton'
 import Link from 'next/link'
-
+//--
 function Accordion({ items }) {
   const [currentIndex, setCurrentIndex] = useState(null)
 
