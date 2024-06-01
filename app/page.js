@@ -36,7 +36,7 @@ export default async function Home() {
       <GetInvolvedBanner />
       
       <Footer />
-      <Modal />
+      {/* <Modal /> */}
     </main>
   );
 }
