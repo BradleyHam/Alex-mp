@@ -12,6 +12,8 @@ export async function getHomePage() {
     const projects = await client.fetch(groq`*[_type == "homePage"]{
         missionStatementHeading,
         missionStatement,
+        whyVoteHeading,
+        whyVotePoints,
         areasOfFocusHeading,
         areasOfFocus[]{
           areaOfFocus,

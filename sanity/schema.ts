@@ -23,6 +23,21 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "text"
         },
         {
+          title: "Why vote heading",
+          name: "whyVoteHeading",
+          type: "text"
+        },
+        {
+          title: "Why vote points",
+          name: "whyVotePoints",
+          type: "array",
+          of: [
+            {
+              type: 'text'
+            }
+          ]
+        },
+        {
           title: "Areas of Focus Heading",
           name: "areasOfFocusHeading",
           type: "text"
@@ -151,21 +166,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           title: "About Image",
           name: "aboutImage",
           type: "image"
-        },
-        {
-          title: "Why vote heading",
-          name: "whyVoteHeading",
-          type: "text"
-        },
-        {
-          title: "Why vote points",
-          name: "whyVotePoints",
-          type: "array",
-          of: [
-            {
-              type: 'text'
-            }
-          ]
         }
       ],
       preview: {

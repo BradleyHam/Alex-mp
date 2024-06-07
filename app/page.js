@@ -19,14 +19,13 @@ import {getHomePage, getNewsPosts, getAboutPage} from "../sanity/utils";
 
 export default async function Home() {
   const homeContent = await getHomePage();
-  const aboutData = await getAboutPage();
 
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <Navbar />
       <Hero />
-      <WhyVoteAlex points={aboutData.whyVotePoints} whyVoteHeading={aboutData.whyVoteHeading}/>
+      <WhyVoteAlex points={homeContent.whyVotePoints} whyVoteHeading={homeContent.whyVoteHeading}/>
       <WhyNotTories  whyNotLabour={homeContent.whyNotLabour}/>
       {/* <MissionSection missionStatement={homeContent.missionStatement} missionStatementHeading={homeContent.missionStatementHeading}/> */}
       <Policies areasOfFocus={homeContent.areasOfFocus} areasOfFocusHeading={homeContent.areasOfFocusHeading}/>
