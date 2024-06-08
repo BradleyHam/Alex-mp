@@ -13,16 +13,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: "document",
       fields: [
         {
-          title: "Mission Statement Heading",
-          name: "missionStatementHeading",
-          type: "text"
-        },
-        {
-          title: "Mission Statement",
-          name: "missionStatement",
-          type: "text"
-        },
-        {
           title: "Why vote heading",
           name: "whyVoteHeading",
           type: "text"
@@ -92,37 +82,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           ]
         
         },
-        {
-          title: "Get Involved Heading",
-          name: "getInvolvedHeading",
-          type: "text"
-        },
-        {
-          title: "Vote Instructions",
-          name: "voteInstructions",
-          type: "text"
-        },
-        {
-          title: "Link to vote",
-          name: "linkToVote",
-          type: "url"
-        },
-        {
-          title: "Volunteer heading",
-          name: "volunteerHeading",
-          type: "text",
-          description: 'text displayed aboved volunteer form'
-        },
-        {
-          title: "Donate Instructions",
-          name: "donateInstructions",
-          type: "text"
-        },
-        {
-          title: "Link to donate",
-          name: "linkToDonate",
-          type: "url"
-        },
+        
         {
           title: "News Heading",
           name: "newsHeading",
@@ -322,3 +282,36 @@ export const schema: { types: SchemaTypeDefinition[] } = {
   ],
   
 }
+
+
+// {
+//   title: "Get Involved Heading",
+//   name: "getInvolvedHeading",
+//   type: "text"
+// },
+// {
+//   title: "Vote Instructions",
+//   name: "voteInstructions",
+//   type: "text"
+// },
+// {
+//   title: "Link to vote",
+//   name: "linkToVote",
+//   type: "url"
+// },
+// {
+//   title: "Volunteer heading",
+//   name: "volunteerHeading",
+//   type: "text",
+//   description: 'text displayed aboved volunteer form'
+// },
+// {
+//   title: "Donate Instructions",
+//   name: "donateInstructions",
+//   type: "text"
+// },
+// {
+//   title: "Link to donate",
+//   name: "linkToDonate",
+//   type: "url"
+// },
