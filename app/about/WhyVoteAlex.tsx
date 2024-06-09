@@ -11,7 +11,8 @@ export default function WhyVoteAlex({points, whyVoteHeading}: {points: string[],
                 <div className="image-side  w-full ">
                     <div className="  h-[400px]  ">
                         <div className="relative h-full w-full p-2">
-                         <Image src='/images/alex-mp-7.webp'  layout='fill'  alt='something' objectPosition="top" objectFit='cover'/> 
+                        <Image src='/images/alex-mp-7.webp' layout='fill' alt='Alexander Martin, independent MP candidate for Edinburgh South' objectPosition="top" objectFit='cover'/>
+
                         </div>
                     </div>
                     <p className="quote-one italic text-xl font-light  text-center lg:text-left mt-[40px]"><span className="text-3xl font-bold text-gray-400 mr-2">&quot;</span>I&apos;m dismayed by the quality of many elected representatives. I want to bring honesty, integrity,

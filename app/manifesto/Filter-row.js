@@ -1,17 +1,16 @@
-'use client'
-import React, { useState } from 'react';
-import { IoChevronDown } from 'react-icons/io5';
+'use client';
+import React from 'react';
 
-export default function FilterRow({ setactiveAreaOfFocus, activeAreaOfFocus, areasOfFocus }) {
+export default function FilterRow({ setActiveAreaOfFocus, activeAreaIndex, areasOfFocus }) {
    return (
-    <div className='filter-row  overflow-x-hidden flex-wrap lg:relative flex '>
+    <div className='filter-row overflow-x-hidden flex-wrap lg:relative flex'>
         {areasOfFocus.map((area, index) => (
-           <div key={index} onClick={() => setactiveAreaOfFocus(area)} className={activeAreaOfFocus === area ? `px-4 py-2 cursor-pointer font-semibold capitalize bg-primaryAccent m-1 rounded` : `px-4 py-2 cursor-pointer capitalize bg-gray-100 m-1 rounded`}>
+           <div key={index} onClick={() => setActiveAreaOfFocus(index)} className={activeAreaIndex === index ? `px-4 py-2 cursor-pointer font-semibold capitalize bg-primaryAccent m-1 rounded` : `px-4 py-2 cursor-pointer capitalize bg-gray-100 m-1 rounded`}>
                 {area.title}
            </div>
         ))}
     </div>
-   )
+   );
 }
 
 

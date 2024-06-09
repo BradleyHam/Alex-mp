@@ -11,7 +11,8 @@ export default function AboutSection({aboutTitle, about, image}: {aboutTitle: st
             </div>
             <div className="     lg:flex-1 order-first w-[100%] ">
             <div className="image-side lg:mr-4 relative lg:flex-1 h-[400px] w-[100%] order-first">
-                <Image src={image}  layout='fill' objectFit='cover' objectPosition='50% calc(50% - 80px)' alt='something'/>
+            <Image src={image} layout='fill' objectFit='cover' objectPosition='50% calc(50% - 80px)' alt='Alexander Martin, independent MP candidate for Edinburgh South, working at a desk' />
+
             </div>
         </div>
           </div>
